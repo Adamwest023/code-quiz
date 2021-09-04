@@ -1,0 +1,21 @@
+#quiz-start {
+    display: flex;
+}
+
+#quiz-text {
+    display: none ;
+}
+
+#countdown-div {
+    display: none;
+}
+
+#quiz-test-card {
+    display: none;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+#quiz-buttons button {
+    
+}
