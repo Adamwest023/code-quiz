@@ -79,6 +79,8 @@ function timer() {
             timerEl.textContent = "";
             timeDiv.textContent = "";
             clearInterval(timeLeft);
+            highScore();
+            endquiz();
         } else if(timeRemaining === 5){
             timerEl.style.color = "red";
         } 
