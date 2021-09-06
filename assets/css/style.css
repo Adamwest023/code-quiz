@@ -20,3 +20,7 @@
 #quiz-buttons button {
     margin: 4px;
 }
+
+#high-scores {
+    display: none;
+}

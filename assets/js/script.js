@@ -232,6 +232,7 @@ function endquiz(){
 
 function highScore() {
     var highScore = localStorage.getItem("playerScore");
+    
 
     if(highScore === null){
         highScore = playerScore;
@@ -249,6 +250,8 @@ function highScore() {
     
 };
 
+
+
 startBtn.addEventListener("click", function(){
     startQuiz();
     document.getElementById("quiz-text").style.display = "flex" ;
@@ -259,8 +262,26 @@ startBtn.addEventListener("click", function(){
 
 
 // pretendBtn.addEventListener("click", function() {
-//     chosenQuiz = sportsBank
-// })
+    //     chosenQuiz = sportsBank
+    // })
+    // var scoreArray = function (){
+        
+    //     for (var i = 0; i < highestSco)
+    // }
+    // var showHighScore = function () {
+    //     var highestScore = [" "]
+    //     for (var i = hightScore) {
+    //         if 
+    //     }
+        
+    //     var bestString = "";
+    //     var highScore = Math.max.apply(Math, scores);
+    //     for (var i in scores) {
+    //         if (scores[i] > highScore) highScore = scores[i];
+    //         bestString += "High Score Student = " + names[i] + "\n" + "High Score = " + highScore;
+    //     }
+    //     $("results").value = bestString;
+    // };
 
 
 // const cat = localStorage.getItem('playerScore');
