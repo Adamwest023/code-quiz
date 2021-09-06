@@ -10,6 +10,7 @@ var btn3 = document.getElementById("btn-3");
 var btn4 = document.getElementById("btn-4");
 var quizBtnEL = document.getElementById("quiz-buttons");
 var timeDiv = document.getElementById("countdown-div");
+var highScoreListEl = document.getElementById('highScoreList');
 
 var timeRemaining = 60;
 var currentQuestion = 0;
@@ -231,15 +232,24 @@ function endquiz(){
 // };
 
 function highScore() {
-    var highScore = localStorage.getItem("playerScore");
+    var highScores = localStorage.getItem("playerScore");
+    highScoress = JSON.parse(highScores);
+
+    highScores.length = (0, 5);
     
 
     if(highScore === null){
-        highScore = playerScore;
+        highScores = playerScore;
         alert("You set a high score!");
+        for (var i = 0; i < highScores.length; i++) {
+            var createLi = document.createElement("li");
+            createLi.setAttribute("id", "topfive");
+            createLi.textContent = allScores[i];
+            highScoreListEl.appendChild(createLi);
+        }
         endquiz;
     } else if(highScore < playerScore){
-        highScore = playerScore;
+        highScores = playerScore;
         alert("You set a new high score of " + playerScore + "!");
         localStorage.setItem("playerScore", playerScore);
         endquiz;
@@ -249,6 +259,17 @@ function highScore() {
     }
     
 };
+
+
+// if (allScores !== null) {
+//     for (var i = 0; i < allScores.length; i++) {
+//         var createLi = document.createElement("li");
+//         createLi.setAttribute("id", "topfive");
+//         createLi.textContent = allScores[i];
+//         highScoreListEl.appendChild(createLi);
+//     }
+// };
+
 
 
 
